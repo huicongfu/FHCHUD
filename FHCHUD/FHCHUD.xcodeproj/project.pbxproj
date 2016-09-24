@@ -15,6 +15,7 @@
 		5B404E801D960D23002FC0DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B404E7E1D960D23002FC0DD /* LaunchScreen.storyboard */; };
 		5B404E8B1D960D23002FC0DD /* FHCHUDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B404E8A1D960D23002FC0DD /* FHCHUDTests.m */; };
 		5B404E961D960D24002FC0DD /* FHCHUDUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B404E951D960D24002FC0DD /* FHCHUDUITests.m */; };
+		5B404EA61D960F97002FC0DD /* FHCHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B404EA51D960F97002FC0DD /* FHCHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		5B404E911D960D24002FC0DD /* FHCHUDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FHCHUDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B404E951D960D24002FC0DD /* FHCHUDUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FHCHUDUITests.m; sourceTree = "<group>"; };
 		5B404E971D960D24002FC0DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B404EA41D960F97002FC0DD /* FHCHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHCHUD.h; sourceTree = "<group>"; };
+		5B404EA51D960F97002FC0DD /* FHCHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHCHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		5B404E6F1D960D23002FC0DD /* FHCHUD */ = {
 			isa = PBXGroup;
 			children = (
+				5B404EA31D960F79002FC0DD /* FHCHUD */,
 				5B404E731D960D23002FC0DD /* AppDelegate.h */,
 				5B404E741D960D23002FC0DD /* AppDelegate.m */,
 				5B404E761D960D23002FC0DD /* ViewController.h */,
@@ -138,6 +142,15 @@
 				5B404E971D960D24002FC0DD /* Info.plist */,
 			);
 			path = FHCHUDUITests;
+			sourceTree = "<group>";
+		};
+		5B404EA31D960F79002FC0DD /* FHCHUD */ = {
+			isa = PBXGroup;
+			children = (
+				5B404EA41D960F97002FC0DD /* FHCHUD.h */,
+				5B404EA51D960F97002FC0DD /* FHCHUD.m */,
+			);
+			path = FHCHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B404E781D960D23002FC0DD /* ViewController.m in Sources */,
+				5B404EA61D960F97002FC0DD /* FHCHUD.m in Sources */,
 				5B404E751D960D23002FC0DD /* AppDelegate.m in Sources */,
 				5B404E721D960D23002FC0DD /* main.m in Sources */,
 			);
@@ -414,6 +428,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FHCHUD/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fhc.FHCHUD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,6 +440,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FHCHUD/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fhc.FHCHUD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
