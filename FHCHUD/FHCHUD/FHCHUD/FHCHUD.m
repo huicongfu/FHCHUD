@@ -58,11 +58,30 @@ static CGFloat const kPadding = 4;
 }
 
 - (void)setupView{
-    
+    _label = [[UILabel alloc] initWithFrame:self.bounds];
+    _label.adjustsFontSizeToFitWidth = NO;
+    _label.textAlignment = NSTextAlignmentCenter;
+    _label.opaque = NO;
+    _label.backgroundColor = [UIColor clearColor];
+    _label.textColor = [UIColor whiteColor];
+    _label.text = self.labelText;
+    [self addSubview:_label];
 }
 
 - (void)updateIndicators{
+    BOOL isActivityIndicator = [_indicatorView isKindOfClass:[UIActivityIndicatorView class]];
     
+    if (_mode == FHCHUDModeIndicator) {
+        if (!isActivityIndicator) {
+            [self.indicatorView removeFromSuperview];
+            self.indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+            [(UIActivityIndicatorView *)self.indicatorView startAnimating];
+            [self addSubview:self.indicatorView];
+        }
+    }else if (_mode == FHCHUDModeIndicator){
+        [self.indicatorView removeFromSuperview];
+        self.indicatorView = nil;
+    }
 }
 
 - (void)registerForKVO{
